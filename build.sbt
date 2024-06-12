@@ -1,6 +1,11 @@
 ThisBuild / scalaVersion := "3.3.3"
 
-lazy val `flexmark-util-misc` = project.in(file("flexmark-util-misc"))
+lazy val `scalamd-core` = project.in(file("scalamd-core"))
 
-lazy val root = project.in(file("."))
-  .aggregate(`flexmark-util-misc`)
+lazy val `flexmark-util-collection` = project
+  .in(file("flexmark-util-collection"))
+  .dependsOn(`scalamd-core`)
+
+lazy val root = project
+  .in(file("."))
+  .aggregate(`scalamd-core`, `flexmark-util-collection`)
