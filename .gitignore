@@ -5,6 +5,7 @@
 out/
 
 # IntelliJ IDEA
+.idea
 
 # Maven
 target/
@@ -38,3 +39,9 @@ target/
 /assets/comms/
 /lib/
 /mvn-dependency-tree.txt
+
+# sbt, Scala
+target/
+.bloop
+.bsp
+.metals
